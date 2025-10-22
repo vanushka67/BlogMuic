@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopMusik</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h2>TopMusik</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/post">Мои публикации</a></li>
+                    <li><a href="#principles">Фото альбомы</a></li>
+                    <li><a href="/">Обо мне</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% for post in post_list %}
+            <section id="about" class="about-section">
+                <h2>{{ post.title }}</h2>
+                <img src="{{ post.img.url }}" alt="Фото альбом 1">
+                <p>{{ post.description }}</p>
+                <span><b>{{ post.date }}</b></span>
+            </section>
+        {% endfor %}
+
+            <section id="contact" class="contact-section">
+                <h2>Контактная информация</h2>
+                <div class="contact-info">
+                    <p><strong>Имя:</strong> Парфирова Елена Юрьевна</p>
+                    <p><strong>Должность:</strong> Музыкальный руководитель и педагог</p>
+                    <p><strong>Стаж:</strong> Более 15 лет</p>
+                    <p><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+                    <p><strong>Email:</strong> example@email.com</p>
+                </div>
+            </section>
+    </main>
+</body>
+</html>

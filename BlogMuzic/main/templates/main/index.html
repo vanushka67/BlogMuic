@@ -1,0 +1,95 @@
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopMusik</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h2>TopMusik</h2>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/post">Мои публикации</a></li>
+                    <li><a href="#principles">Фото альбомы</a></li>
+                    <li><a href="">Обо мне</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Парфирова Елена Юрьевна</h1>
+                    <p class="subtitle">Опытный музыкальный руководитель и педагог с более чем 15-летним стажем</p>
+                </div>
+                <div class="header-photo">
+                    <div>
+                        <img src="{% static 'main/img/photoone.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Секция "Обо мне" -->
+        <section id="about" class="about-section">
+            <h2>Профессиональная философия</h2>
+            <p>В основе профессиональной философии — убежденность в том, что музыка является универсальным языком коммуникации с детской аудиторией. Ключевой задачей можно выделение и развития творческого потенциала каждого ребенка через поддержку его собственных идей и их последующую реализацию.</p>
+        </section>
+
+        <!-- Секция "Педагогические принципы" -->
+        <section id="principles" class="principles-section">
+            <h2>Педагогические принципы</h2>
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h3>Индивидуальный подход</h3>
+                    <p>Признание и развитие уникального творческого потенциала каждого ребенка.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Образовательная среда</h3>
+                    <p>Формирование атмосферы психологического комфорта, вовлекающей игровой деятельности и позитивной мотивации.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Комплексное развитие</h3>
+                    <p>Формирование не только музыкальных навыков, но и эмоционального интеллекта, эстетического восприятия и компетенций командного взаимодействия.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Комплексное развитие</h3>
+                    <p>Формирование не только музыкальных навыков, но и эмоционального интеллекта, эстетического восприятия и компетенций командного взаимодействия.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Комплексное развитие</h3>
+                    <p>Формирование не только музыкальных навыков, но и эмоционального интеллекта, эстетического восприятия и компетенций командного взаимодействия.</p>
+                </div>
+                <div class="principle-card">
+                    <h3>Комплексное развитие</h3>
+                    <p>Формирование не только музыкальных навыков, но и эмоционального интеллекта, эстетического восприятия и компетенций командного взаимодействия.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contact" class="contact-section">
+            <h2>Контактная информация</h2>
+            <div class="contact-info">
+                <p><strong>Имя:</strong> Парфирова Елена Юрьевна</p>
+                <p><strong>Должность:</strong> Музыкальный руководитель и педагог</p>
+                <p><strong>Стаж:</strong> Более 15 лет</p>
+                <p><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+                <p><strong>Email:</strong> example@email.com</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
