@@ -22,16 +22,20 @@
             </div>
         </div>
     </nav>
-
-    <main class="container">
-        {% for post in post_list %}
-            <section id="about" class="about-section">
-                <h2>{{ post.title }}</h2>
-                <img src="{{ post.img.url }}" alt="Фото альбом 1">
-                <p>{{ post.description }}</p>
-                <span><b>{{ post.date }}</b></span>
-            </section>
+    <div class="photos">
+        {% for photo in photos %}
+        <div class="photo-item">
+            <h3>{{ photo.title }}</h3>
+            <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+            {% if photo.description %}
+            <p>{{ photo.description }}</p>
+            {% endif %}
+            <small>Добавлено: {{ photo.created|date:"d.m.Y" }}</small>
+        </div>
+        {% empty %}
+        <p>Пока нет фотографий. Добавьте их через админ-панель.</p>
         {% endfor %}
+    </div>
 
             <section id="contact" class="contact-section">
                 <h2>Контактная информация</h2>

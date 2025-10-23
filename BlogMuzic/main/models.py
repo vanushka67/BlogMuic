@@ -12,3 +12,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Photo(models.Model):
+    title = models.CharField(max_length=200, verbose_name='Название')
+    image = models.ImageField(upload_to='photos/', verbose_name='Фото')
+    description = models.TextField(blank=True, verbose_name='Описание')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления')
+
+    def __str__(self):
+        return self.title
