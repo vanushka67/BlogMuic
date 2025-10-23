@@ -22,17 +22,20 @@
             </div>
         </div>
     </nav>
-
+     <section id="principles" class="principles-section">
+            <h2>Публикации</h2>
+                {% for post in posts %}
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <h3>{{ post.title }}</h3>
+                            <img src="{{ post.img.url }}" alt="Фото альбом 1">
+                            <p>{{ post.description }}</p>
+                            <span><b>{{ post.date }}</b></span>
+                        </div>
+                    </div>
+                {% endfor %}
+        </section>
     <main class="container">
-        {% for post in post_list %}
-            <section id="about" class="about-section">
-                <h2>{{ post.title }}</h2>
-                <img src="{{ post.img.url }}" alt="Фото альбом 1">
-                <p>{{ post.description }}</p>
-                <span><b>{{ post.date }}</b></span>
-            </section>
-        {% endfor %}
-
             <section id="contact" class="contact-section">
                 <h2>Контактная информация</h2>
                 <div class="contact-info">

@@ -27,9 +27,6 @@
         <div class="photo-item">
             <h3>{{ photo.title }}</h3>
             <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
-            {% if photo.description %}
-            <p>{{ photo.description }}</p>
-            {% endif %}
             <small>Добавлено: {{ photo.created|date:"d.m.Y" }}</small>
         </div>
         {% empty %}
